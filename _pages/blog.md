@@ -31,6 +31,7 @@ pagination:
 
 {% assign study_areas = site.data.study_areas %}
 {% if study_areas.size > 0 %}
+
   <section class="study-areas">
     <h2>Study Areas</h2>
     <div class="study-area-grid">

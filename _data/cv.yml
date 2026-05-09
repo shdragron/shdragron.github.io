@@ -1,16 +1,17 @@
 cv:
   name: Floragonis
-  label: Undergraduate Researcher in Autonomous Driving Perception
+  headline: Undergraduate Researcher in Autonomous Driving Perception
   email:
   location: South Korea
-  image: ""
-  summary: Undergraduate researcher and vehicle engineer working on autonomous driving perception, robust BEV representation, multi-camera calibration, and real-vehicle deployment. My background connects Formula Student vehicle engineering with computer vision research for autonomous driving systems.
 
   social_networks:
     - network: GitHub
       username: shdragron
 
   sections:
+    Summary:
+      - Undergraduate researcher and vehicle engineer working on autonomous driving perception, robust BEV representation, multi-camera calibration, and real-vehicle deployment. My background connects Formula Student vehicle engineering with computer vision research for autonomous driving systems.
+
     Experience:
       - company: Formula Student
         position: Mechanical Analysis Lead Engineer
@@ -65,7 +66,7 @@ cv:
         position: Team Lead
         location: South Korea
         start_date: 2025
-        end_date: Present
+        end_date: present
         summary: Leading driverless Formula Student work from simulator-based perception to real-vehicle preparation.
         highlights:
           - Led LiDAR-based perception for the 1st Korean Formula Student Driverless Competition based on the Formula Student Driverless Simulator.
@@ -76,7 +77,7 @@ cv:
         position: Undergraduate Researcher - Ongoing Research
         location: South Korea
         start_date: 2026
-        end_date: Present
+        end_date: present
         summary: Preparing research projects on real-vehicle data acquisition, robust 3D object detection, and LiDAR-based reasoning.
         highlights:
           - Preparing a real-vehicle data acquisition project.
@@ -84,34 +85,26 @@ cv:
           - Exploring LiDAR LLM approaches for ground reasoning.
 
     Awards:
-      - title: 1st Place Winner
+      - name: 1st Place Winner — 1st Korean Formula Student Driverless Competition
         date: 2025
-        awarder: 1st Korean Formula Student Driverless Competition
         summary: Team lead and LiDAR-based perception contributor in a simulator-based Formula Student Driverless competition.
 
-      - title: Grand Prize
+      - name: Grand Prize — Graduation Thesis and Poster Presentation
         date: 2025
-        awarder: Graduation Thesis and Poster Presentation
         summary: Awarded for work on multi-camera calibration and multi-view BEV semantic segmentation for autonomous driving.
 
-      - title: Bronze Prize
+      - name: Bronze Prize — Formula Student Korea
         date: 2024
-        awarder: Formula Student Korea
         summary: Podium finish.
 
-      - title: Gold Prize
-        date:
-        awarder: Altair Optimal Design Award
+      - name: Gold Prize — Altair Optimal Design Award
         summary: Awarded for engineering optimization work.
 
-      - title: Silver Prize
+      - name: Silver Prize — KSAE Engineering Design Award
         date: 2020
-        awarder: KSAE Engineering Design Award
         summary: Engineering design award from KSAE.
 
-      - title: 35th Place
-        date:
-        awarder: FSAE California
+      - name: 35th Place — FSAE California
         summary: International Formula Student competition result.
 
     Projects:
