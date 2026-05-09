@@ -46,12 +46,15 @@ jobs:
       # Format the regenerated TOC so the Prettier check on the auto-commit
       # doesn't fail (e.g. gh-md-toc emits raw `_config.yml` while Prettier
       # expects `\_config.yml`).
+      - name: Install Prettier
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: npm ci
+
       - name: Format updated markdown files with Prettier
         if: steps.changed-files.outputs.any_changed == 'true'
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: |
-          npx --yes -p prettier@3 -p @shopify/prettier-plugin-liquid -- prettier --write ${ALL_CHANGED_FILES}
+        run: npx prettier --write ${ALL_CHANGED_FILES}
 
       - name: Commit changes
         if: steps.changed-files.outputs.any_changed == 'true'
