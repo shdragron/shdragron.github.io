@@ -258,7 +258,7 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["bev", "perception", "calibration", "sensor-fusion", "jetson"] # these tags will be displayed on the front page of your blog
-display_categories: ["Sensors", "Computer Vision"] # these categories will be displayed on the front page of your blog
+display_categories: ["Sensors", "Computer Vision", "Formula Student Driverless", "Machine Learning", "Time Series"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
