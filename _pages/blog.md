@@ -33,7 +33,6 @@ pagination:
 {% if study_areas.size > 0 %}
 
   <section class="study-areas">
-    <h2>Study Areas</h2>
     <div class="study-area-grid">
       {% for area in study_areas %}
         {% assign area_posts = site.posts | where_exp: "post", "post.categories contains area.name" %}
