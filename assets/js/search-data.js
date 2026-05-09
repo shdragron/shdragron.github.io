@@ -16,37 +16,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-jetson-orin-nano-csi-camera-setup-notes",
+        },{id: "post-sample-post",
         
-          title: "Jetson Orin Nano CSI Camera Setup Notes",
+          title: "Sample Post",
         
-        description: "A place to collect embedded camera setup, debugging, and deployment notes.",
+        description: "A placeholder post to verify the blog layout works.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/jetson-orin-nano-csi-camera-notes/";
-          
-        },
-      },{id: "post-lidar-camera-calibration-single-normal-vector-is-not-enough",
-        
-          title: "LiDAR-Camera Calibration: Single Normal Vector is Not Enough",
-        
-        description: "Notes on why calibration assumptions need to be checked against downstream perception behavior.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/lidar-camera-calibration-single-normal-vector-is-not-enough/";
-          
-        },
-      },{id: "post-why-bev-models-fail-under-small-camera-rotation",
-        
-          title: "Why BEV Models Fail under Small Camera Rotation",
-        
-        description: "A starting research log for studying viewpoint-change robustness in BEV perception.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/why-bev-models-fail-under-camera-rotation/";
+            window.location.href = "/blog/2026/sample-post/";
           
         },
       },{
