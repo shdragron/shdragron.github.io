@@ -1,13 +1,13 @@
 ---
 layout: about
-title: Floragonis
+title: SHDragron
 permalink: /
 subtitle: Undergraduate Researcher - Autonomous Driving Perception
 cv: true
 
 motto:
   text: Blossom Where You Are
-  author: Floragonis
+  author: SHDragron
 
 profile:
   align: right
