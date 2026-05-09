@@ -1,0 +1,115 @@
+{% assign cv = site.data.cv.cv %}
+
+{% if cv and cv.sections %}
+  <style>
+    .cv-home .cv-card,
+    .cv-home .cv-card > div,
+    .cv-home .cv-card .list-group,
+    .cv-home .cv-card .list-group-item,
+    .cv-home .cv-card .row,
+    .cv-home .cv-card table,
+    .cv-home .cv-card tbody,
+    .cv-home .cv-card tr,
+    .cv-home .cv-card td {
+      background-color: var(--global-card-bg-color) !important;
+      border-color: var(--global-divider-color) !important;
+    }
+
+    .cv-home .cv-card,
+    .cv-home .cv-card h3,
+    .cv-home .cv-card h6,
+    .cv-home .cv-card p,
+    .cv-home .cv-card li,
+    .cv-home .cv-card span,
+    .cv-home .cv-card td,
+    .cv-home .cv-card th {
+      color: var(--global-text-color) !important;
+    }
+
+    .cv-home .cv-card .badge {
+      color: var(--global-hover-text-color) !important;
+      background-color: var(--global-theme-color) !important;
+    }
+
+    .cv-home .cv-card .iconlocation,
+    .cv-home .cv-card .iconinstitution,
+    .cv-home .cv-card .icondepartment,
+    .cv-home .cv-card a {
+      color: var(--global-theme-color) !important;
+    }
+  </style>
+  <section class="cv-home">
+  <h2 id="cv">CV</h2>
+
+  {% assign empty_array = '' | split: ',' %}
+  {% assign exp = cv.sections.Experience | default: empty_array %}
+  {% assign vol = cv.sections.Volunteer | default: empty_array %}
+  {% assign combined_experience = exp | concat: vol %}
+  {% if combined_experience.size > 0 %}
+    <a class="anchor" id="experience"></a>
+    <div class="card cv-card mt-3 p-3">
+      <h3 class="card-title font-weight-medium">Experience</h3>
+      <div>
+        {% assign entries = combined_experience %}
+        {% include cv/experience.liquid %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% for section_pair in cv.sections %}
+    {% assign section_title = section_pair[0] %}
+    {% assign section_entries = section_pair[1] %}
+
+    {% if section_title == 'Experience' or section_title == 'Volunteer' %}
+      {% continue %}
+    {% endif %}
+
+    <a class="anchor" id="{{ section_title | slugify }}"></a>
+    <div class="card cv-card mt-3 p-3">
+      <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+      <div>
+        {% if section_title == 'Education' %}
+          {% assign entries = section_entries %}
+          {% include cv/education.liquid %}
+        {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
+          {% assign entries = section_entries %}
+          {% include cv/awards.liquid %}
+        {% elsif section_title == 'Publications' %}
+          {% assign entries = section_entries %}
+          {% include cv/publications.liquid %}
+        {% elsif section_title == 'Skills' %}
+          {% assign entries = section_entries %}
+          {% include cv/skills.liquid %}
+        {% elsif section_title == 'Languages' %}
+          {% assign entries = section_entries %}
+          {% include cv/languages.liquid %}
+        {% elsif section_title == 'Interests' or section_title == 'Academic Interests' %}
+          {% assign entries = section_entries %}
+          {% include cv/interests.liquid %}
+        {% elsif section_title == 'Certificates' %}
+          {% assign entries = section_entries %}
+          {% include cv/certificates.liquid %}
+        {% elsif section_title == 'Projects' or section_title == 'Open Source Projects' %}
+          {% assign entries = section_entries %}
+          {% include cv/projects.liquid %}
+        {% elsif section_title == 'References' %}
+          {% assign entries = section_entries %}
+          {% include cv/references.liquid %}
+        {% else %}
+          {% for entry in section_entries %}
+            {% if entry.bullet %}
+              <ul class="card-text font-weight-light list-group list-group-flush">
+                <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+              </ul>
+            {% elsif entry.label %}
+              <div class="card-text font-weight-light">
+                <strong>{{ entry.label }}:</strong> {{ entry.details }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+  </section>
+{% endif %}

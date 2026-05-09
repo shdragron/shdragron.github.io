@@ -14,6 +14,13 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
+  {% if page.motto %}
+    <aside class="motto" aria-label="Personal motto">
+      <p class="motto-text">{{ page.motto.text }}</p>
+      <p class="motto-author">- {{ page.motto.author }}</p>
+    </aside>
+  {% endif %}
+
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -39,6 +46,10 @@ layout: default
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
+
+    {% if page.cv %}
+      {% include cv_home.liquid %}
+    {% endif %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}

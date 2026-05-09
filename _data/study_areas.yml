@@ -1,0 +1,10 @@
+- name: Sensors
+  description: Cameras, LiDAR, calibration, synchronization, embedded setup, and real-vehicle data acquisition.
+- name: Deep Learning
+  description: PyTorch, training practice, model architectures, weak supervision, optimization, and deployment.
+- name: Computer Vision
+  description: BEV perception, semantic segmentation, 3D object detection, robustness analysis, and simulation.
+- name: Formula Student Driverless
+  description: LiDAR perception, simulator-based autonomy, real-vehicle driverless systems, and competition notes.
+- name: Autonomous Driving Systems
+  description: Sensor fusion, onboard inference, data pipelines, hardware integration, and vehicle-level debugging.

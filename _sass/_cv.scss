@@ -6,6 +6,120 @@ div.container-link-button {
   margin-right: 0.5rem;
 }
 
+.cv {
+  .card {
+    background-color: var(--global-card-bg-color);
+    border-color: var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+
+  .card-title,
+  .title,
+  h3,
+  h6,
+  p,
+  td,
+  th,
+  li,
+  span.item {
+    color: var(--global-text-color);
+  }
+
+  .list-group-item {
+    background-color: var(--global-card-bg-color) !important;
+    border-color: var(--global-divider-color) !important;
+    color: var(--global-text-color) !important;
+  }
+
+  .table,
+  .table-cv {
+    color: var(--global-text-color) !important;
+  }
+
+  .badge {
+    color: var(--global-hover-text-color);
+    background-color: var(--global-theme-color) !important;
+  }
+}
+
+.cv-home,
+.cv .cv-home {
+  .cv-card,
+  .cv-card > div,
+  .cv-card .list-group,
+  .cv-card .list-group-flush,
+  .cv-card .list-group-item,
+  .cv-card .row,
+  .cv-card table,
+  .cv-card tbody,
+  .cv-card tr,
+  .cv-card td {
+    background-color: var(--global-card-bg-color) !important;
+    border-color: var(--global-divider-color) !important;
+  }
+
+  .cv-card,
+  .cv-card h3,
+  .cv-card h6,
+  .cv-card p,
+  .cv-card li,
+  .cv-card span,
+  .cv-card td,
+  .cv-card th {
+    color: var(--global-text-color) !important;
+  }
+
+  .cv-card .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cv-card .badge {
+    color: var(--global-hover-text-color) !important;
+    background-color: var(--global-theme-color) !important;
+  }
+
+  .cv-card .iconlocation,
+  .cv-card .iconinstitution,
+  .cv-card .icondepartment,
+  .cv-card a {
+    color: var(--global-theme-color) !important;
+  }
+}
+
+html[data-theme="dark"] {
+  .cv {
+    .card,
+    .card .list-group,
+    .card .list-group-item,
+    ul.list-group li.list-group-item {
+      background-color: var(--global-card-bg-color) !important;
+      color: var(--global-text-color) !important;
+      border-color: var(--global-divider-color) !important;
+    }
+
+    .card *,
+    .list-group-item *,
+    .table *,
+    .table-cv * {
+      color: var(--global-text-color);
+    }
+
+    a,
+    a:hover,
+    i.iconlocation,
+    i.iconinstitution,
+    i.icondepartment {
+      color: var(--global-theme-color) !important;
+    }
+
+    .badge {
+      color: var(--global-hover-text-color) !important;
+      background-color: var(--global-theme-color) !important;
+    }
+  }
+}
+
 table.table-cv {
   background-color: transparent !important;
 

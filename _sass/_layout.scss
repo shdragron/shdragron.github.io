@@ -40,6 +40,48 @@ body.sticky-bottom-footer {
   }
 }
 
+.motto {
+  border-bottom: 1px solid var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  margin: 1rem 0 2rem;
+  padding: 1.25rem 0 1.1rem;
+  text-align: center;
+}
+
+.motto-text {
+  color: var(--global-text-color);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.motto-author {
+  color: var(--global-text-color-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  letter-spacing: 0;
+  margin: 0.45rem 0 0;
+}
+
+@media (max-width: 576px) {
+  .motto {
+    margin: 0.75rem 0 1.5rem;
+    padding: 1rem 0 0.9rem;
+  }
+
+  .motto-text {
+    font-size: 1.8rem;
+  }
+
+  .motto-author {
+    font-size: 1rem;
+  }
+}
+
 // Content layout uses Bootstrap's grid system with responsive columns
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples

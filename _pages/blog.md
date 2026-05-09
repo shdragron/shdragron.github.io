@@ -3,7 +3,7 @@ layout: default
 permalink: /blog/
 title: blog
 nav: true
-nav_order: 1
+nav_order: 2
 pagination:
   enabled: true
   collection: posts
@@ -28,6 +28,29 @@ pagination:
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
+
+{% assign study_areas = site.data.study_areas %}
+{% if study_areas.size > 0 %}
+  <section class="study-areas">
+    <h2>Study Areas</h2>
+    <div class="study-area-grid">
+      {% for area in study_areas %}
+        {% assign area_posts = site.posts | where_exp: "post", "post.categories contains area.name" %}
+        <article class="study-area">
+          <div class="study-area-title">
+            {% if area_posts.size > 0 %}
+              <a href="{{ area.name | slugify | prepend: '/blog/category/' | relative_url }}">{{ area.name }}</a>
+            {% else %}
+              <span>{{ area.name }}</span>
+            {% endif %}
+            <span class="study-area-count">{{ area_posts.size }}</span>
+          </div>
+          <p>{{ area.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
