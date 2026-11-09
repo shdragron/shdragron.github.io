@@ -219,6 +219,7 @@ const DATA = {
     links: [
       ["Email", "mailto:shdragron@hanyang.ac.kr", "fa-solid fa-envelope"],
       ["GitHub", "https://github.com/shdragron", "fa-brands fa-github"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=XB0xpX0AAAAJ", "ai ai-google-scholar"],
       ["LinkedIn", "https://www.linkedin.com/in/shdragron", "fa-brands fa-linkedin"]
     ],
     bio: [
@@ -247,7 +248,7 @@ const DATA = {
     ["2024.12", "Joined the <a href=\"https://ircv.hanyang.ac.kr/\">IRCV Lab</a> at Hanyang University as an undergraduate researcher."]
   ],
 
-  pubNote: "(* denotes equal contribution)",
+  pubNote: "For a complete list, see my <a href=\"https://scholar.google.com/citations?user=XB0xpX0AAAAJ\" target=\"_blank\" rel=\"noopener\">Google Scholar</a>.<br><br>(* denotes equal contribution)",
   publications: [
     {
       title: "RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception",
@@ -332,7 +333,7 @@ const DATA = {
   /* publications */
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const boldMe = a => esc(a).split(esc(P.me)).join(`<b>${esc(P.me)}</b>`);
-  $("#pub-note").textContent = DATA.publications.some(p => p.authors.includes("*")) ? DATA.pubNote : "";
+  $("#pub-note").innerHTML = DATA.pubNote || "";
   $("#pubs").innerHTML = DATA.publications.map((p, n) => {
     const first = Object.values(p.links)[0] || "";
     const isVid = /\.(mp4|webm)$/i.test(p.thumb || "");
