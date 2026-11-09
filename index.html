@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Giyong Moon</title>
+<meta name="description" content="Giyong Moon is an undergraduate researcher at the IRCV Lab, Hanyang University, working on robust multi-camera BEV and 3D perception and LiDAR spatial grounding for autonomous driving.">
+<meta name="author" content="Giyong Moon">
+<link rel="canonical" href="https://shdragron.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Giyong Moon">
+<meta property="og:description" content="Undergraduate researcher at the IRCV Lab, Hanyang University. Robust multi-camera BEV and 3D perception for autonomous driving.">
+<meta property="og:url" content="https://shdragron.github.io/">
+<meta property="og:image" content="https://shdragron.github.io/assets/profile.jpg">
+<meta name="twitter:card" content="summary">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: two-column profile header (identity | bio + interests + education),
+   then single-column sections: News, Publications (thumbnail | text), Experience timeline, Awards. */
+:root{
+  --bg:#f7f8fa;
+  --surface:#ffffff;
+  --fg:#18202b;
+  --muted:#5b6676;
+  --line:#dfe3ea;
+  --accent:#0d6e7d;      /* lidar teal */
+  --accent-soft:#e2f1f3;
+  --signal:#b06a00;      /* amber: highlight badges */
+  --signal-soft:#fbefdc;
+  --font-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.375rem; --s3:1.875rem;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1318; --surface:#161b22; --fg:#e4e8ee; --muted:#9aa5b4; --line:#2a313b;
+    --accent:#5cc6d3; --accent-soft:#16323a; --signal:#f0b45a; --signal-soft:#3a2a12; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1318; --surface:#161b22; --fg:#e4e8ee; --muted:#9aa5b4; --line:#2a313b;
+  --accent:#5cc6d3; --accent-soft:#16323a; --signal:#f0b45a; --signal-soft:#3a2a12; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
+html{scroll-behavior:smooth; scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+body{
+  margin:0;
+  background:var(--bg); color:var(--fg);
+  font-family:var(--font-body); font-size:var(--s0); line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.wrap{max-width:1040px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+/* top bar */
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top, 0px); z-index:10; background:var(--bg)}
+.topbar{position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; gap:24px; padding-block:12px}
+.brand{font-family:var(--font-display); font-weight:600; font-size:var(--s1); color:var(--fg)}
+.brand:hover{text-decoration:none}
+.nav{display:flex; gap:20px; margin-left:auto; font-size:var(--s-1); font-weight:500}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--fg); text-decoration:none}
+.theme-btn{border:1px solid var(--line); background:var(--surface); color:var(--muted); width:32px; height:32px; border-radius:50%; cursor:pointer; display:grid; place-items:center}
+.theme-btn:hover{color:var(--fg)}
+@media (max-width:640px){ .nav{display:none} .theme-btn{margin-left:auto} }
+
+/* profile */
+.profile{display:grid; grid-template-columns:260px minmax(0,1fr); gap:56px; padding-block:56px 40px}
+@media (max-width:760px){ .profile{grid-template-columns:minmax(0,1fr); gap:32px; padding-block:36px 24px} }
+.id{display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px}
+.avatar{width:200px; max-width:100%; aspect-ratio:1; border-radius:50%; overflow:hidden; border:1px solid var(--line); background:var(--accent-soft); display:grid; place-items:center; margin-bottom:12px}
+.avatar img{width:100%; height:100%; object-fit:cover}
+.avatar span{font-family:var(--font-display); font-size:3.5rem; color:var(--accent)}
+.id h1{font-family:var(--font-display); font-weight:600; font-size:var(--s3); line-height:1.15; margin:0; text-wrap:balance}
+.id .native{font-size:var(--s-1); color:var(--muted)}
+.id .role{color:var(--fg); margin-top:4px}
+.id .aff{color:var(--muted); font-size:.9375rem}
+.id .aff a{color:inherit}
+.id .aff a:hover{color:var(--accent)}
+.id .next{margin-top:6px; font-size:var(--s-1); color:var(--accent); background:var(--accent-soft); padding:3px 10px; border-radius:999px}
+.links{display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:14px}
+.links a{font-size:var(--s-1); font-weight:500; padding:4px 10px; border:1px solid var(--line); border-radius:999px; color:var(--fg); background:var(--surface)}
+.links a:hover{border-color:var(--accent); color:var(--accent); text-decoration:none}
+.email{display:flex; align-items:center; gap:6px; margin-top:10px; font-family:var(--font-mono); font-size:.75rem; color:var(--muted)}
+.email code{user-select:all}
+.copy{border:0; background:none; color:var(--accent); font:inherit; cursor:pointer; padding:2px 4px}
+
+.bio h2, .sec-head h2, .cols h2{font-family:var(--font-display); font-weight:600; font-size:var(--s2); margin:0 0 12px; letter-spacing:-.005em}
+.bio p{margin:0 0 12px; max-width:65ch}
+.bio .seeking{margin-top:4px; padding:10px 14px; background:var(--signal-soft); color:var(--fg); border-radius:6px; font-size:.9375rem; max-width:65ch}
+.bio .seeking b{color:var(--signal)}
+.two{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin-top:28px}
+@media (max-width:520px){ .two{grid-template-columns:minmax(0,1fr); gap:20px} }
+.label{font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+.plain{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.interests li{padding-left:16px; position:relative}
+.interests li::before{content:""; position:absolute; left:0; top:.62em; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+.edu li{display:grid; grid-template-columns:56px minmax(0,1fr); gap:2px 10px}
+.edu .yr{font-family:var(--font-mono); font-size:.75rem; color:var(--muted); padding-top:3px; font-variant-numeric:tabular-nums}
+.edu .deg{font-weight:500}
+.edu .sch{grid-column:2; color:var(--muted); font-size:.9375rem}
+
+/* sections */
+section{border-top:1px solid var(--line)}
+section > .wrap{padding-block:40px}
+.sec-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:20px}
+.sec-head h2{margin:0!important}
+.sec-head .hint{font-size:var(--s-1); color:var(--muted)}
+.sec-head .hint a{font-weight:500}
+
+/* news */
+.news{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.news li{display:grid; grid-template-columns:84px minmax(0,1fr); gap:16px}
+.news .d{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:2px; font-variant-numeric:tabular-nums}
+.toggle{margin-top:14px; border:0; background:none; color:var(--accent); font:500 var(--s-1)/1 var(--font-body); cursor:pointer; padding:4px 0}
+
+/* filters */
+.chips{display:flex; gap:6px; flex-wrap:wrap; margin-left:auto}
+.chip{border:1px solid var(--line); background:var(--surface); color:var(--muted); font:500 .75rem/1 var(--font-body); padding:6px 10px; border-radius:999px; cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg); color:var(--bg); border-color:var(--fg)}
+
+/* publications */
+.pubs{display:grid; gap:28px}
+.pub{display:grid; grid-template-columns:220px minmax(0,1fr); gap:24px; align-items:start}
+@media (max-width:620px){ .pub{grid-template-columns:minmax(0,1fr); gap:12px} }
+.thumb{position:relative; width:100%; max-width:100%; aspect-ratio:16/10; border-radius:6px; overflow:hidden; border:1px solid var(--line); background:#0b1016}
+.thumb.img{background:#fff}
+.thumb canvas, .thumb img, .thumb video{display:block; width:100%; height:100%; object-fit:cover}
+.thumb .tag{position:absolute; left:8px; top:8px; font-family:var(--font-mono); font-size:.6875rem; color:#e9f6f8; background:rgba(8,14,20,.72); padding:2px 6px; border-radius:3px}
+.pub h3{font-size:var(--s1); font-weight:600; line-height:1.35; margin:0 0 4px; text-wrap:balance}
+.pub h3 a{color:var(--fg)}
+.pub .authors{font-size:.9375rem; color:var(--muted); margin:0}
+.pub .authors b{color:var(--fg); font-weight:600}
+.pub .venue{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:6px 0 0; font-size:.9375rem}
+.pub .venue em{font-style:italic}
+.badge{font-family:var(--font-mono); font-size:.6875rem; font-weight:500; padding:2px 7px; border-radius:3px; background:var(--accent-soft); color:var(--accent)}
+.badge.hot{background:var(--signal-soft); color:var(--signal)}
+.pub .tl{margin:8px 0 0; font-size:.9375rem; max-width:65ch}
+.btns{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.btns a, .btns button{font:500 .75rem/1 var(--font-mono); padding:6px 9px; border:1px solid var(--line); border-radius:4px; color:var(--fg); background:var(--surface); cursor:pointer}
+.btns a:hover, .btns button:hover{border-color:var(--accent); color:var(--accent); text-decoration:none}
+.bib{margin-top:10px; position:relative}
+.bib pre{margin:0; padding:12px 14px; background:var(--surface); border:1px solid var(--line); border-radius:6px; font:12px/1.55 var(--font-mono); color:var(--fg); overflow-x:auto}
+.bib .copy{position:absolute; right:6px; top:6px; font-size:.75rem; background:var(--bg); border-radius:3px}
+.eq{font-size:var(--s-1); color:var(--muted); margin-top:20px}
+
+/* experience */
+.xp{list-style:none; margin:0; padding:0; display:grid; gap:22px}
+.xp li{display:grid; grid-template-columns:150px minmax(0,1fr); gap:20px}
+@media (max-width:560px){ .xp li{grid-template-columns:minmax(0,1fr); gap:2px} }
+.xp .when{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:3px; font-variant-numeric:tabular-nums}
+.xp .what{font-weight:600}
+.xp .org{color:var(--muted)}
+.xp .org a{font-weight:500}
+.xp p{margin:4px 0 0; font-size:.9375rem; max-width:65ch}
+
+.cols{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px}
+.cols.single{grid-template-columns:minmax(0,1fr)}
+@media (max-width:620px){ .cols{grid-template-columns:minmax(0,1fr); gap:28px} }
+.cols h2{margin-bottom:14px!important}
+.lst{list-style:none; margin:0; padding:0; display:grid; gap:8px; font-size:.9375rem}
+.lst li{display:grid; grid-template-columns:52px minmax(0,1fr); gap:10px}
+.lst .y{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:1px; font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px max(40px, env(safe-area-inset-bottom, 0px)); font-size:var(--s-1); color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brand">Giyong Moon</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#" id="nav-cv" hidden>CV</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle dark mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap profile">
+    <aside class="id" id="id"></aside>
+    <div class="bio" id="bio"></div>
+  </div>
+
+  <section id="news"><div class="wrap">
+    <div class="sec-head"><h2>News</h2></div>
+    <ul class="news" id="news-list"></ul>
+    <button class="toggle" id="news-toggle" type="button" hidden>Show all news</button>
+  </div></section>
+
+  <section id="publications"><div class="wrap">
+    <div class="sec-head">
+      <h2>Publications</h2>
+      <span class="hint" id="pub-hint"></span>
+      <div class="chips" id="chips" role="group" aria-label="Filter publications">
+        <button class="chip" type="button" data-f="selected" aria-pressed="true">Selected</button>
+        <button class="chip" type="button" data-f="all" aria-pressed="false">All</button>
+      </div>
+    </div>
+    <div class="pubs" id="pubs"></div>
+    <p class="eq" id="eq">* equal contribution</p>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <ul class="xp" id="xp"></ul>
+  </div></section>
+
+  <section id="awards"><div class="wrap cols" id="award-cols">
+    <div><h2>Awards &amp; Honors</h2><ul class="lst" id="awards-list"></ul></div>
+    <div id="service-col"><h2>Academic Service</h2><ul class="lst" id="service-list"></ul></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span id="foot-name"></span>
+  <span id="updated"></span>
+</div></footer>
+
+<script>
+/* ============================================================
+   EDIT YOUR CONTENT HERE. Everything on the page comes from DATA.
+   - me: the exact author string to bold in author lists.
+   - thumb: path to an image/gif/mp4 (e.g. "assets/paper.webp"). Leave "" to draw a placeholder BEV scene.
+   - Empty fields (nativeName, seeking, email, service, ...) are simply hidden.
+   - The <title> and <meta> tags in <head> are static: update them by hand if the name or role changes.
+   ============================================================ */
+const DATA = {
+  profile: {
+    name: "Giyong Moon",
+    nativeName: "",                  // e.g. Korean name
+    me: "Giyong Moon",
+    role: "Undergraduate Researcher",
+    affiliation: ["IRCV Lab, Hanyang University", "https://ircv.hanyang.ac.kr/"],
+    next: "Incoming M.S. student, March 2027",
+    photo: "assets/profile.jpg",
+    email: "shdragron@hanyang.ac.kr",
+    links: [
+      ["GitHub", "https://github.com/shdragron"],
+      ["LinkedIn", "https://www.linkedin.com/in/shdragron"],
+      ["Hugging Face", "https://huggingface.co/shdragron"]
+    ],
+    bio: [
+      "I am an undergraduate researcher at the <a href=\"https://ircv.hanyang.ac.kr/\">Intelligent Robotics and Computer Vision (IRCV) Lab</a>, Hanyang University, advised by Prof. Soonmin Hwang. I will start my M.S. in Automotive Engineering at Hanyang University in March 2027.",
+      "My research asks how autonomous vehicles perceive and reason about 3D space when real-world conditions change: camera viewpoint, calibration, and sensor or vehicle configuration. I work on <b>robust multi-camera BEV and 3D perception</b> and <b>LiDAR-based spatial grounding</b>. Recently I co-first-authored <a href=\"https://robogeo2027.github.io/\">RoboGeo</a> (WACV 2027), a benchmark for camera-geometry robustness in BEV perception, and <a href=\"https://arxiv.org/abs/2609.29835\">Retrieve-to-Localize</a>, which grounds language queries in LiDAR geometry with an LLM.",
+      "Before moving into perception, I spent four years on Hanyang's Formula Student team RACE doing mechanical analysis for monocoque race cars. That shapes how I approach research: a perception model is one part of a vehicle, bounded by geometry, hardware, timing, and deployment limits."
+    ],
+    seeking: "",
+    interests: [
+      "Robust multi-camera BEV & 3D perception",
+      "Multi-view geometry",
+      "Camera & LiDAR spatial grounding",
+      "Robustness to sensor and vehicle configuration changes",
+      "Real-vehicle deployment"
+    ],
+    education: [
+      ["2027–", "M.S. in Automotive Engineering", "Hanyang University, from March 2027"],
+      ["2020–26", "B.S. in Automotive Engineering", "Hanyang University"]
+    ]
+  },
+
+  news: [
+    ["2026.11", "Released the <a href=\"https://github.com/shdragron/RoboGeo\">code</a> and <a href=\"https://huggingface.co/datasets/shdragron/RoboGeo\">dataset</a> for RoboGeo."],
+    ["2026", "<b>RoboGeo</b> was accepted to <b>WACV 2027</b> in Round 1 (Evaluations &amp; Datasets Track)."],
+    ["2026.09", "Our preprint <a href=\"https://arxiv.org/abs/2609.29835\">Retrieve-to-Localize</a> on LLM-based spatial grounding in LiDAR is on arXiv."],
+    ["2025", "Won <b>1st place</b> at the 1st Korean Formula Student Driverless Competition as team lead."],
+    ["2025", "Received the <b>Grand Prize</b> for my graduation thesis and poster on robust BEV perception."],
+    ["2024.12", "Joined the <a href=\"https://ircv.hanyang.ac.kr/\">IRCV Lab</a> at Hanyang University as an undergraduate researcher."]
+  ],
+
+  publications: [
+    {
+      title: "RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception",
+      authors: "Jeongtae Kim*, Giyong Moon*, Chanyoung Lee, Soonmin Hwang",
+      venue: "WACV", year: 2027, track: "Evaluations & Datasets Track", highlight: "Round 1 Acceptance",
+      tagline: "A CARLA-based benchmark that re-renders scenes under controlled camera-geometry changes, with viewpoint-perturbation and cross-platform (sedan, SUV, bus) transfer protocols.",
+      thumb: "assets/robogeo.webp", selected: true,
+      links: { Project: "https://robogeo2027.github.io/", Code: "https://github.com/shdragron/RoboGeo", Dataset: "https://huggingface.co/datasets/shdragron/RoboGeo" },
+      bibtex: "@inproceedings{robogeo2027,\n  title     = {RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception},\n  author    = {Jeongtae Kim and Giyong Moon and Chanyoung Lee and Soonmin Hwang},\n  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  year      = {2027}\n}"
+    },
+    {
+      title: "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding",
+      authors: "Byounggun Park*, Giyong Moon*, Jusung Kim, Soonmin Hwang",
+      venue: "arXiv preprint", year: 2026, track: "", highlight: "",
+      tagline: "Introduces SpatialLiDAR-QA and SpatialLiDAR-LM, which answers compositional spatial questions by retrieving position-aware proposals and refining target coordinates directly from local LiDAR points.",
+      thumb: "assets/spatiallidar.webp", selected: true,
+      links: { arXiv: "https://arxiv.org/abs/2609.29835", PDF: "https://arxiv.org/pdf/2609.29835" },
+      bibtex: "@article{park2026retrieve,\n  title   = {Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding},\n  author  = {Park, Byounggun and Moon, Giyong and Kim, Jusung and Hwang, Soonmin},\n  journal = {arXiv preprint arXiv:2609.29835},\n  year    = {2026}\n}"
+    }
+  ],
+
+  // [when, role, organization, link ("" for none), extra (shown after a dot), one-line description]
+  experience: [
+    ["2024.12 – Present", "Undergraduate Researcher", "IRCV Lab, Hanyang University", "https://ircv.hanyang.ac.kr/", "Advisor: Prof. Soonmin Hwang", "Robust multi-camera BEV and 3D perception under camera viewpoint, calibration, and sensor-configuration changes, using real-world driving data and CARLA; LiDAR-based spatial grounding and 3D spatial reasoning."],
+    ["2025 – Present", "Team Lead", "Formula Student Driverless", "", "", "Led LiDAR-based perception and won 1st place at the 1st Korean Formula Student Driverless Competition (simulator); now preparing a real-vehicle driverless car."],
+    ["2025", "Camera Perception Engineer", "T-CAR Project", "", "", "Camera–LiDAR calibration, hardware synchronization, and StreamPETR 3D detection deployed on a real vehicle with TensorRT."],
+    ["2020.03 – 2024.09", "Mechanical Analysis Engineer", "RACE Formula Student Team, Hanyang University", "", "", "Led optimization of the Forsythia E-Formula car, Korea's first 4WD in-wheel-motor vehicle with a full monocoque; cut upright weight from 1.3 to 0.9 kg and A-arm weight from 9.8 to 7.5 kg."],
+    ["2021.09 – 2023.03", "Military Service", "Republic of Korea Army", "", "", "Sergeant, 20th Armored Brigade."]
+  ],
+
+  awards: [
+    ["2025", "1st Place, 1st Korean Formula Student Driverless Competition"],
+    ["2025", "Grand Prize, Graduation Thesis and Poster Presentation"],
+    ["2024", "Bronze Prize (3rd), Formula Student Korea, E-Formula"],
+    ["2021", "Gold Prize (1st), Formula KSAE Altair Optimal Design Award"],
+    ["2021", "Overall 35th, Formula SAE California"],
+    ["2020", "Silver Prize, Formula KSAE Engineering Design Award"],
+    ["", "Gold Prize (1st), 6th Engineering Fundamentals Design Contest"]
+  ],
+
+  service: [],
+
+  updated: "November 2026"
+};
+</script>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+  const P = DATA.profile;
+
+  /* ---------- theme ---------- */
+  const root = document.documentElement;
+  $("#theme-btn").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch(e){}
+  });
+
+  /* ---------- profile ---------- */
+  $("#brand").textContent = P.name;
+  $("#foot-name").textContent = "© " + new Date().getFullYear() + " " + P.name;
+  $("#updated").textContent = "Last updated " + DATA.updated;
+  const cv = P.links.find(l => /\bcv\b/i.test(l[0]));
+  if (cv) { $("#nav-cv").href = cv[1]; $("#nav-cv").hidden = false; }
+
+  const [affName, affUrl] = Array.isArray(P.affiliation) ? P.affiliation : [P.affiliation, ""];
+  const initials = P.name.split(/\s+/).map(w => w[0]).join("").slice(0,2).toUpperCase();
+  $("#id").innerHTML = `
+    <div class="avatar">${P.photo ? `<img src="${esc(P.photo)}" alt="${esc(P.name)}" width="200" height="200">` : `<span>${esc(initials)}</span>`}</div>
+    <h1>${esc(P.name)}</h1>
+    ${P.nativeName ? `<div class="native">${esc(P.nativeName)}</div>` : ""}
+    <div class="role">${esc(P.role)}</div>
+    <div class="aff">${affUrl ? `<a href="${esc(affUrl)}" target="_blank" rel="noopener">${esc(affName)}</a>` : esc(affName)}</div>
+    ${P.next ? `<div class="next">${esc(P.next)}</div>` : ""}
+    <div class="links">${P.links.map(([t,h]) => `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(t)}</a>`).join("")}</div>
+    ${P.email ? `<div class="email"><code id="email-text">${esc(P.email)}</code><button class="copy" type="button" data-copy="#email-text">Copy</button></div>` : ""}`;
+
+  const eduCol = P.education.length ? `<div><p class="label">Education</p><ul class="plain edu">${P.education.map(([y,d,s]) => `<li><span class="yr">${esc(y)}</span><span class="deg">${esc(d)}</span><span class="sch">${esc(s)}</span></li>`).join("")}</ul></div>` : "";
+  $("#bio").innerHTML = `
+    <h2>About me</h2>
+    ${P.bio.map(p => `<p>${p}</p>`).join("")}
+    ${P.seeking ? `<p class="seeking">${P.seeking}</p>` : ""}
+    <div class="two">
+      <div><p class="label">Interests</p><ul class="plain interests">${P.interests.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>
+      ${eduCol}
+    </div>`;
+
+  /* ---------- news ---------- */
+  const NEWS_SHOWN = 6;
+  const newsList = $("#news-list"), newsBtn = $("#news-toggle");
+  let newsAll = false;
+  function renderNews(){
+    const items = newsAll ? DATA.news : DATA.news.slice(0, NEWS_SHOWN);
+    newsList.innerHTML = items.map(([d,t]) => `<li><span class="d">${esc(d)}</span><span>${t}</span></li>`).join("");
+    newsBtn.hidden = DATA.news.length <= NEWS_SHOWN;
+    newsBtn.textContent = newsAll ? "Show fewer" : `Show all news (${DATA.news.length})`;
+  }
+  newsBtn.addEventListener("click", () => { newsAll = !newsAll; renderNews(); });
+  renderNews();
+
+  /* ---------- publications ---------- */
+  const allSelected = DATA.publications.every(p => p.selected);
+  let filter = allSelected ? "all" : "selected";
+  $("#chips").hidden = allSelected;
+  $("#eq").hidden = !DATA.publications.some(p => p.authors.includes("*"));
+  const pubsEl = $("#pubs");
+  function boldMe(a){ return esc(a).split(esc(P.me)).join(`<b>${esc(P.me)}</b>`); }
+  function renderPubs(){
+    const list = DATA.publications.filter(p => filter === "all" || p.selected);
+    $("#pub-hint").innerHTML = filter === "selected" ? `${list.length} of ${DATA.publications.length} shown` : "";
+    pubsEl.innerHTML = list.map(p => {
+      const n = DATA.publications.indexOf(p), id = "pub" + n;
+      const media = !p.thumb ? `<canvas data-kind="${esc(p.kind||"bev")}" data-seed="${n+1}" width="440" height="275"></canvas><span class="tag">${esc(p.venue)} ${p.year}</span>`
+        : /\.(mp4|webm)$/i.test(p.thumb) ? `<video src="${esc(p.thumb)}" autoplay muted loop playsinline></video>`
+        : `<img src="${esc(p.thumb)}" alt="" loading="lazy" width="880" height="550">`;
+      const first = Object.values(p.links)[0] || "#";
+      return `<article class="pub">
+        <div class="thumb${p.thumb ? " img" : ""}">${media}</div>
+        <div>
+          <h3><a href="${esc(first)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
+          <p class="authors">${boldMe(p.authors)}</p>
+          <p class="venue"><em>${esc(p.venue)} ${p.year}</em>${p.track ? `<span class="badge">${esc(p.track)}</span>` : ""}${p.highlight ? `<span class="badge hot">${esc(p.highlight)}</span>` : ""}</p>
+          ${p.tagline ? `<p class="tl">${esc(p.tagline)}</p>` : ""}
+          <div class="btns">
+            ${Object.entries(p.links).map(([k,v]) => `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(k)}</a>`).join("")}
+            ${p.bibtex ? `<button type="button" aria-expanded="false" aria-controls="${id}-bib" data-bib="${id}">BibTeX</button>` : ""}
+          </div>
+          ${p.bibtex ? `<div class="bib" id="${id}-bib" hidden><pre id="${id}-pre">${esc(p.bibtex)}</pre><button class="copy" type="button" data-copy="#${id}-pre">Copy</button></div>` : ""}
+        </div>
+      </article>`;
+    }).join("");
+    pubsEl.querySelectorAll("canvas").forEach(drawThumb);
+  }
+  document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+    filter = c.dataset.f;
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+    renderPubs();
+  }));
+  pubsEl.addEventListener("click", e => {
+    const b = e.target.closest("[data-bib]"); if (!b) return;
+    const box = document.getElementById(b.dataset.bib + "-bib");
+    box.hidden = !box.hidden; b.setAttribute("aria-expanded", !box.hidden);
+  });
+
+  /* ---------- experience / awards / service ---------- */
+  $("#xp").innerHTML = DATA.experience.map(([w,r,o,h,extra,d]) => `<li>
+      <span class="when">${esc(w)}</span>
+      <div><div class="what">${esc(r)}</div><div class="org">${h ? `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(o)}</a>` : esc(o)}${extra ? " · " + esc(extra) : ""}</div>${d ? `<p>${esc(d)}</p>` : ""}</div>
+    </li>`).join("");
+  $("#awards-list").innerHTML = DATA.awards.map(([y,t]) => `<li><span class="y">${esc(y)}</span><span>${esc(t)}</span></li>`).join("");
+  if (DATA.service.length) {
+    $("#service-list").innerHTML = DATA.service.map(([y,t]) => `<li style="grid-template-columns:72px minmax(0,1fr)"><span class="y">${esc(y)}</span><span>${esc(t)}</span></li>`).join("");
+  } else {
+    $("#service-col").remove();
+    $("#award-cols").classList.add("single");
+  }
+
+  /* ---------- copy buttons ---------- */
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-copy]"); if (!b) return;
+    const el = document.querySelector(b.dataset.copy); const txt = el.textContent;
+    const done = () => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1400); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; setTimeout(() => b.textContent = "Copy", 1400); };
+    try { navigator.clipboard.writeText(txt).then(done, sel); } catch(err){ sel(); }
+  });
+
+  /* ---------- placeholder BEV thumbnails (used only when thumb is "") ---------- */
+  function rng(seed){ let s = seed * 9301 + 49297; return () => (s = (s * 9301 + 49297) % 233280) / 233280; }
+  function drawThumb(cv){
+    const ctx = cv.getContext("2d"), W = cv.width, H = cv.height, r = rng(+cv.dataset.seed * 7), kind = cv.dataset.kind;
+    ctx.fillStyle = "#0b1016"; ctx.fillRect(0,0,W,H);
+    const cx = W*0.5, cy = H*0.62;
+    ctx.strokeStyle = "rgba(92,198,211,0.10)"; ctx.lineWidth = 1;
+    for (let k=1;k<=5;k++){ ctx.beginPath(); ctx.arc(cx,cy,k*48,0,Math.PI*2); ctx.stroke(); }
+    ctx.fillStyle = "#18212b";
+    ctx.fillRect(cx-46,0,92,H);
+    if (r() > .35){ const y = H*(0.22 + r()*0.2); ctx.fillRect(0,y-38,W,76); }
+    ctx.strokeStyle = "rgba(240,180,90,0.55)"; ctx.setLineDash([10,10]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx,0); ctx.lineTo(cx,H); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = "rgba(220,230,240,0.35)";
+    ctx.beginPath(); ctx.moveTo(cx-46,0); ctx.lineTo(cx-46,H); ctx.moveTo(cx+46,0); ctx.lineTo(cx+46,H); ctx.stroke();
+    if (kind === "occ"){
+      const g = 11;
+      for (let x=0;x<W;x+=g) for (let y=0;y<H;y+=g){
+        const d = Math.hypot(x-cx,y-cy);
+        if (r() < 0.10 && d > 30){ ctx.fillStyle = `rgba(92,198,211,${0.15+r()*0.45})`; ctx.fillRect(x+1,y+1,g-2,g-2); }
+      }
+    }
+    if (kind === "lidar" || kind === "bev"){
+      const n = kind === "lidar" ? 2600 : 900;
+      for (let i=0;i<n;i++){
+        const a = r()*Math.PI*2, d = 20 + Math.pow(r(),0.7)*260;
+        const x = cx + Math.cos(a)*d, y = cy + Math.sin(a)*d*0.95;
+        const t = 1 - d/280;
+        ctx.fillStyle = `rgba(${Math.round(92+150*(1-t))},${Math.round(198*t+90)},${Math.round(211*t+80)},${0.25+0.55*t})`;
+        ctx.fillRect(x,y,1.4,1.4);
+      }
+    }
+    const agents = 4 + Math.floor(r()*4);
+    for (let i=0;i<agents;i++){
+      const lane = r() > .5 ? 1 : -1;
+      const x = cx + lane*23 + (r()-.5)*6, y = 20 + r()*(H-40);
+      if (Math.abs(y-cy) < 30) continue;
+      const dir = lane > 0 ? 1 : -1;
+      for (let m=0;m<3;m++){
+        const bend = (m-1) * (8 + r()*14);
+        ctx.strokeStyle = `rgba(240,180,90,${m===1?0.85:0.35})`; ctx.lineWidth = m===1?2:1.2;
+        ctx.beginPath(); ctx.moveTo(x,y);
+        ctx.quadraticCurveTo(x, y - dir*40, x + bend, y - dir*(70 + r()*20)); ctx.stroke();
+      }
+      ctx.strokeStyle = "#5cc6d3"; ctx.lineWidth = 1.6;
+      ctx.strokeRect(x-7,y-13,14,26);
+    }
+    ctx.fillStyle = "#e9f6f8"; ctx.fillRect(cx+23-8,cy-15,16,30);
+    ctx.strokeStyle = "rgba(233,246,248,0.9)"; ctx.lineWidth = 2.4;
+    ctx.beginPath(); ctx.moveTo(cx+23,cy-15);
+    ctx.bezierCurveTo(cx+23,cy-70,cx+23+(r()-.5)*30,cy-110,cx+23+(r()-.5)*50,cy-150); ctx.stroke();
+  }
+
+  renderPubs();
+})();
+</script>
+</body>
+</html>
