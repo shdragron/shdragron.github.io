@@ -1,5 +1,517 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> SHDragron </title> <meta name="author" content="SHDragron "> <meta name="description" content="Undergraduate researcher interested in autonomous driving perception, robust BEV representation, and multimodal sensor fusion. "> <meta name="keywords" content="autonomous-driving, perception, bev, sensor-fusion, robotics, portfolio"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://shdragron.github.io/"> <script src="/assets/js/theme.js?v=5fea5159b787642c1bbc1f334d60f883"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">SHDragron <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> SHDragron </h1> <p class="desc">Undergraduate Researcher - Autonomous Driving Perception</p> </header> <aside class="motto" aria-label="Personal motto"> <p class="motto-text">Blossom Where You Are</p> <p class="motto-author">- SHDragron</p> </aside> <article> <div class="profile float-right"> <figure> <picture> <img src="/assets/img/profile_giyong.png?v=155a43708599b2392df6ea5511326d0c" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="profile_giyong.png" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="clearfix"> <p>I’m an undergraduate researcher working on autonomous driving perception, with a background in Formula Student vehicle engineering.</p> <p>My research focuses on how perception systems behave in the real world, beyond clean benchmark conditions. I work on camera viewpoint changes, calibration errors, sensor synchronization, and real-vehicle deployment, with a particular interest in robust BEV perception and LiDAR-based reasoning.</p> <p>Before moving into perception research, I led mechanical analysis for Formula Student vehicles from 2020 to 2024, working on monocoque chassis design, structural and thermal analysis, and component optimization. That experience shaped how I approach research today: a perception model is not just an algorithm, but part of a full vehicle system shaped by geometry, hardware, timing, and deployment limits.</p> <h2 id="research">Research</h2> <h3 id="robust-bev-perception">Robust BEV Perception</h3> <p>Multi-camera calibration and multi-view BEV semantic segmentation. Implemented and trained CVT-based models, analyzing how viewpoint changes and calibration errors affect performance using real-world data and CARLA simulation. Awarded Grand Prize (graduation thesis &amp; poster).</p> <h3 id="real-vehicle-perception-t-car-project">Real-Vehicle Perception (T-CAR Project)</h3> <p>Camera perception for a real-vehicle autonomous driving platform, including camera-LiDAR calibration, hardware synchronization, and StreamPETR deployment for 3D object detection with TensorRT optimization.</p> <h3 id="driver-behavior-analysis">Driver Behavior Analysis</h3> <p>Built a real-vehicle data acquisition environment (CAN, RT2000, PC, eCon Systems cameras) and proposed a multiple-instance time-series architecture for weakly supervised driver behavior classification.</p> <h3 id="formula-student-driverless">Formula Student Driverless</h3> <p>Team Lead for the 1st Korean Formula Student Driverless Competition (LiDAR-based perception). 1st place winner. Currently preparing the next real-vehicle driverless project.</p> <h3 id="ongoing">Ongoing</h3> <p>Real-vehicle data acquisition, LiDAR-camera unsupervised 3D object detection, LiDAR LLM for ground reasoning.</p> </div> <style>.cv-home .cv-card,.cv-home .cv-card>div,.cv-home .cv-card .list-group,.cv-home .cv-card .list-group-item,.cv-home .cv-card .row,.cv-home .cv-card table,.cv-home .cv-card tbody,.cv-home .cv-card tr,.cv-home .cv-card td{background-color:var(--global-card-bg-color)!important;border-color:var(--global-divider-color)!important}.cv-home .cv-card,.cv-home .cv-card h3,.cv-home .cv-card h6,.cv-home .cv-card p,.cv-home .cv-card li,.cv-home .cv-card span,.cv-home .cv-card td,.cv-home .cv-card th{color:var(--global-text-color)!important}.cv-home .cv-card .badge{color:var(--global-hover-text-color)!important;background-color:var(--global-theme-color)!important}.cv-home .cv-card .iconlocation,.cv-home .cv-card .iconinstitution,.cv-home .cv-card .icondepartment,.cv-home .cv-card a{color:var(--global-theme-color)!important}</style> <section class="cv-home"> <h2 id="cv">CV</h2> <a class="anchor" id="experience"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Experience</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2020 - 2024 </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Mechanical Analysis Lead Engineer </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> Formula Student </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Led and contributed to vehicle design, manufacturing, structural analysis, and optimization for Formula Student vehicles. </h6> <ul class="items"> <li> <span class="item">Led design, manufacturing, and optimization work for the Forsythia E-Formula Vehicle, Korea’s first vehicle featuring a 4WD in-wheel motor drive system with a full monocoque chassis. </span> </li> <li> <span class="item">Contributed to the design and assembly of the RH27 monocoque-based vehicle. </span> </li> <li> <span class="item">Reduced component weight through optimization, including upright 1.3 kg to 0.9 kg and A-arm 9.8 kg to 7.5 kg. </span> </li> <li> <span class="item">Optimized mechanical systems using CATIA and Altair HyperWorks. </span> </li> <li> <span class="item">Conducted structural, thermal, and stress analyses for key vehicle components. </span> </li> <li> <span class="item">Collaborated on carbon composite monocoque and nose cone production using fiberglass molds and autoclave processing. </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 - 2025 </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Undergraduate Researcher - Robust BEV Perception </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> Computer Vision for Autonomous Driving </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Researched multi-camera calibration and viewpoint-robust BEV semantic segmentation for autonomous driving. </h6> <ul class="items"> <li> <span class="item">Conducted research on multi-camera calibration and multi-view BEV semantic segmentation. </span> </li> <li> <span class="item">Designed and evaluated viewpoint-robust BEV perception pipelines using real-world driving data and CARLA simulation. </span> </li> <li> <span class="item">Analyzed the impact of camera viewpoint changes and calibration errors on BEV model performance. </span> </li> <li> <span class="item">Implemented and trained Cross View Transformer (CVT)-based models for multi-camera perception. </span> </li> <li> <span class="item">Awarded Grand Prize for graduation thesis and poster presentation. </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 - 2025 </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Undergraduate Researcher - Driver Behavior Analysis </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> Computer Vision for Autonomous Driving </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Studied driver behavior analysis using real-vehicle sensor data and weakly supervised time-series learning. </h6> <ul class="items"> <li> <span class="item">Built an integrated real-vehicle data acquisition environment using CAN, RT2000, PC, and eCon Systems cameras for driver behavior analysis. </span> </li> <li> <span class="item">Applied weakly supervised time-series classification baselines and proposed a novel architecture for multiple-instance time-series driver behavior analysis. </span> </li> <li> <span class="item">Authored a research paper on driver behavior analysis. </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 - 2025 </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Camera Perception Engineer </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> T-CAR Project </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Contributed to camera perception work for a real-vehicle autonomous driving platform. </h6> <ul class="items"> <li> <span class="item">Performed camera-LiDAR calibration and hardware synchronization. </span> </li> <li> <span class="item">Deployed StreamPETR as the 3D object detection model on the vehicle. </span> </li> <li> <span class="item">Applied TensorRT optimization for real-vehicle deployment. </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 - present </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Team Lead </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> Formula Student Driverless </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Leading driverless Formula Student work from simulator-based perception to real-vehicle preparation. </h6> <ul class="items"> <li> <span class="item">Led LiDAR-based perception for the 1st Korean Formula Student Driverless Competition based on the Formula Student Driverless Simulator. </span> </li> <li> <span class="item">Won 1st place in the 1st Korean Formula Student Driverless Competition. </span> </li> <li> <span class="item">Preparing for the 2nd Formula Student Driverless Competition with a real-vehicle-based project. </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2026 - present </span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> South Korea </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Undergraduate Researcher - Ongoing Research </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> Computer Vision for Autonomous Driving </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"> Preparing research projects on real-vehicle data acquisition, robust 3D object detection, and LiDAR-based reasoning. </h6> <ul class="items"> <li> <span class="item">Preparing a real-vehicle data acquisition project. </span> </li> <li> <span class="item">Studying LiDAR-camera based unsupervised 3D object detection for robustness. </span> </li> <li> <span class="item">Exploring LiDAR LLM approaches for ground reasoning. </span> </li> </ul> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="summary"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Summary</h3> <div> </div> </div> <a class="anchor" id="awards"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Awards</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">Team lead and LiDAR-based perception contributor in a simulator-based Formula Student Driverless competition. </p> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2025 </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">Awarded for work on multi-camera calibration and multi-view BEV semantic segmentation for autonomous driving. </p> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2024 </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">Podium finish. </p> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">Awarded for engineering optimization work. </p> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> 2020 </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">Engineering design award from KSAE. </p> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> </span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <p class="ml-1 ml-md-4">International Formula Student competition result. </p> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="projects"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Projects</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <h6 class="title font-weight-bold">Multi-camera Calibration and Multi-view BEV Semantic Segmentation</h6> <p>Research project on robust BEV perception under camera viewpoint changes and calibration errors. </p> <ul class="items"> <li> <span class="item">Used real-world driving data and CARLA simulation. </span> </li> <li> <span class="item">Implemented and trained CVT-based multi-camera perception models. </span> </li> <li> <span class="item">Evaluated viewpoint robustness and calibration-error sensitivity. </span> </li> </ul> </li> <li class="list-group-item"> <h6 class="title font-weight-bold">Multiple Instance Time Series for Driver Behavior Analysis</h6> <p>Driver behavior analysis project using integrated real-vehicle sensor data. </p> <ul class="items"> <li> <span class="item">Built a data acquisition system using CAN, RT2000, PC, and eCon Systems cameras. </span> </li> <li> <span class="item">Applied weakly supervised time-series classification baselines. </span> </li> <li> <span class="item">Proposed a novel architecture and authored a research paper. </span> </li> </ul> </li> <li class="list-group-item"> <h6 class="title font-weight-bold">T-CAR Real-Vehicle Camera Perception</h6> <p>Camera perception work for a real-vehicle autonomous driving platform. </p> <ul class="items"> <li> <span class="item">Camera-LiDAR calibration and hardware synchronization. </span> </li> <li> <span class="item">StreamPETR deployment for 3D object detection. </span> </li> <li> <span class="item">TensorRT optimization for onboard inference. </span> </li> </ul> </li> <li class="list-group-item"> <h6 class="title font-weight-bold">Forsythia E-Formula Vehicle</h6> <p>Formula Student vehicle featuring a 4WD in-wheel motor drive system and full monocoque chassis. </p> <ul class="items"> <li> <span class="item">Led mechanical analysis, design optimization, and manufacturing contributions. </span> </li> <li> <span class="item">Contributed to carbon composite monocoque and nose cone production. </span> </li> </ul> </li> <li class="list-group-item"> <h6 class="title font-weight-bold">Formula Student Driverless</h6> <p>Driverless Formula Student work spanning LiDAR perception, simulator competition, and real-vehicle preparation. </p> <ul class="items"> <li> <span class="item">Led the team in the 1st Korean Formula Student Driverless Competition. </span> </li> <li> <span class="item">Responsible for LiDAR-based perception. </span> </li> <li> <span class="item">Won 1st place. </span> </li> </ul> </li> <li class="list-group-item"> <h6 class="title font-weight-bold">Ongoing Research Projects</h6> <p>Research directions in preparation for 2026 and beyond. </p> <ul class="items"> <li> <span class="item">Real-vehicle data acquisition project. </span> </li> <li> <span class="item">LiDAR-camera based unsupervised 3D object detection for robustness. </span> </li> <li> <span class="item">LiDAR LLM for ground reasoning. </span> </li> </ul> </li> </ul> </div> </div> <a class="anchor" id="skills"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Skills</h3> <div> <div class="card-text font-weight-light"> <div class="skill-item"> <i class="fa-solid fa-code"></i> <strong>Programming:</strong> Python, C++, MATLAB </div> <div class="skill-item"> <i class="fa-solid fa-brain"></i> <strong>Machine Learning and Computer Vision:</strong> PyTorch, BEV perception, CVT, StreamPETR, semantic segmentation, 3D object detection, weakly supervised time-series classification </div> <div class="skill-item"> <i class="fa-solid fa-car"></i> <strong>Autonomous Driving Systems:</strong> Multi-camera calibration, camera-LiDAR calibration, sensor synchronization, CAN, RT2000, CARLA, TensorRT </div> <div class="skill-item"> <i class="fa-solid fa-gear"></i> <strong>Mechanical Design and Analysis:</strong> CATIA, Altair HyperWorks, structural analysis, thermal analysis, stress analysis, composite monocoque manufacturing </div> </div> <style>.skill-item{padding:.5rem 0}</style> </div> </div> <a class="anchor" id="interests"></a> <div class="card cv-card mt-3 p-3"> <h3 class="card-title font-weight-medium">Interests</h3> <div> <div class="card-text font-weight-light"> <div class="interest-item"> <i class="fa-solid fa-car"></i> <strong>Robust Autonomous Driving Perception:</strong> BEV representation, viewpoint robustness, calibration error, sensor fusion </div> <div class="interest-item"> <i class="fa-solid fa-road"></i> <strong>Real-Vehicle Deployment:</strong> Camera perception, LiDAR perception, hardware synchronization, onboard inference </div> </div> <style>.interest-item{padding:.5rem 0}</style> </div> </div> </section> <div class="social"> <div class="contact-icons"> <a href="https://github.com/shdragron" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> </div> <div class="contact-note">The best way to reach me is by email or through GitHub. </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 SHDragron. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
-    addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Giyong Moon</title>
+<meta name="description" content="Giyong Moon is an undergraduate researcher at the IRCV Lab, Hanyang University, working on robust multi-camera BEV and 3D perception and LiDAR spatial grounding for autonomous driving.">
+<meta name="author" content="Giyong Moon">
+<link rel="canonical" href="https://shdragron.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Giyong Moon">
+<meta property="og:description" content="Undergraduate researcher at the IRCV Lab, Hanyang University. Robust multi-camera BEV and 3D perception for autonomous driving.">
+<meta property="og:url" content="https://shdragron.github.io/">
+<meta property="og:image" content="https://shdragron.github.io/assets/profile.jpg">
+<meta name="twitter:card" content="summary">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: two-column profile header (identity | bio + interests + education),
+   then single-column sections: News, Publications (thumbnail | text), Experience timeline, Awards. */
+:root{
+  --bg:#f7f8fa;
+  --surface:#ffffff;
+  --fg:#18202b;
+  --muted:#5b6676;
+  --line:#dfe3ea;
+  --accent:#0d6e7d;      /* lidar teal */
+  --accent-soft:#e2f1f3;
+  --signal:#b06a00;      /* amber: highlight badges */
+  --signal-soft:#fbefdc;
+  --font-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.375rem; --s3:1.875rem;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1318; --surface:#161b22; --fg:#e4e8ee; --muted:#9aa5b4; --line:#2a313b;
+    --accent:#5cc6d3; --accent-soft:#16323a; --signal:#f0b45a; --signal-soft:#3a2a12; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1318; --surface:#161b22; --fg:#e4e8ee; --muted:#9aa5b4; --line:#2a313b;
+  --accent:#5cc6d3; --accent-soft:#16323a; --signal:#f0b45a; --signal-soft:#3a2a12; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
+html{scroll-behavior:smooth; scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+body{
+  margin:0;
+  background:var(--bg); color:var(--fg);
+  font-family:var(--font-body); font-size:var(--s0); line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.wrap{max-width:1040px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+/* top bar */
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top, 0px); z-index:10; background:var(--bg)}
+.topbar{position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; gap:24px; padding-block:12px}
+.brand{font-family:var(--font-display); font-weight:600; font-size:var(--s1); color:var(--fg)}
+.brand:hover{text-decoration:none}
+.nav{display:flex; gap:20px; margin-left:auto; font-size:var(--s-1); font-weight:500}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--fg); text-decoration:none}
+.theme-btn{border:1px solid var(--line); background:var(--surface); color:var(--muted); width:32px; height:32px; border-radius:50%; cursor:pointer; display:grid; place-items:center}
+.theme-btn:hover{color:var(--fg)}
+@media (max-width:640px){ .nav{display:none} .theme-btn{margin-left:auto} }
+
+/* profile */
+.profile{display:grid; grid-template-columns:260px minmax(0,1fr); gap:56px; padding-block:56px 40px}
+@media (max-width:760px){ .profile{grid-template-columns:minmax(0,1fr); gap:32px; padding-block:36px 24px} }
+.id{display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px}
+.avatar{width:200px; max-width:100%; aspect-ratio:1; border-radius:50%; overflow:hidden; border:1px solid var(--line); background:var(--accent-soft); display:grid; place-items:center; margin-bottom:12px}
+.avatar img{width:100%; height:100%; object-fit:cover}
+.avatar span{font-family:var(--font-display); font-size:3.5rem; color:var(--accent)}
+.id h1{font-family:var(--font-display); font-weight:600; font-size:var(--s3); line-height:1.15; margin:0; text-wrap:balance}
+.id .native{font-size:var(--s-1); color:var(--muted)}
+.id .role{color:var(--fg); margin-top:4px}
+.id .aff{color:var(--muted); font-size:.9375rem}
+.id .aff a{color:inherit}
+.id .aff a:hover{color:var(--accent)}
+.id .next{margin-top:6px; font-size:var(--s-1); color:var(--accent); background:var(--accent-soft); padding:3px 10px; border-radius:999px}
+.links{display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:14px}
+.links a{font-size:var(--s-1); font-weight:500; padding:4px 10px; border:1px solid var(--line); border-radius:999px; color:var(--fg); background:var(--surface)}
+.links a:hover{border-color:var(--accent); color:var(--accent); text-decoration:none}
+.email{display:flex; align-items:center; gap:6px; margin-top:10px; font-family:var(--font-mono); font-size:.75rem; color:var(--muted)}
+.email code{user-select:all}
+.copy{border:0; background:none; color:var(--accent); font:inherit; cursor:pointer; padding:2px 4px}
+
+.bio h2, .sec-head h2, .cols h2{font-family:var(--font-display); font-weight:600; font-size:var(--s2); margin:0 0 12px; letter-spacing:-.005em}
+.bio p{margin:0 0 12px; max-width:65ch}
+.bio .seeking{margin-top:4px; padding:10px 14px; background:var(--signal-soft); color:var(--fg); border-radius:6px; font-size:.9375rem; max-width:65ch}
+.bio .seeking b{color:var(--signal)}
+.two{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin-top:28px}
+@media (max-width:520px){ .two{grid-template-columns:minmax(0,1fr); gap:20px} }
+.label{font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+.plain{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.interests li{padding-left:16px; position:relative}
+.interests li::before{content:""; position:absolute; left:0; top:.62em; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+.edu li{display:grid; grid-template-columns:56px minmax(0,1fr); gap:2px 10px}
+.edu .yr{font-family:var(--font-mono); font-size:.75rem; color:var(--muted); padding-top:3px; font-variant-numeric:tabular-nums}
+.edu .deg{font-weight:500}
+.edu .sch{grid-column:2; color:var(--muted); font-size:.9375rem}
+
+/* sections */
+section{border-top:1px solid var(--line)}
+section > .wrap{padding-block:40px}
+.sec-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:20px}
+.sec-head h2{margin:0!important}
+.sec-head .hint{font-size:var(--s-1); color:var(--muted)}
+.sec-head .hint a{font-weight:500}
+
+/* news */
+.news{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.news li{display:grid; grid-template-columns:84px minmax(0,1fr); gap:16px}
+.news .d{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:2px; font-variant-numeric:tabular-nums}
+.toggle{margin-top:14px; border:0; background:none; color:var(--accent); font:500 var(--s-1)/1 var(--font-body); cursor:pointer; padding:4px 0}
+
+/* filters */
+.chips{display:flex; gap:6px; flex-wrap:wrap; margin-left:auto}
+.chip{border:1px solid var(--line); background:var(--surface); color:var(--muted); font:500 .75rem/1 var(--font-body); padding:6px 10px; border-radius:999px; cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg); color:var(--bg); border-color:var(--fg)}
+
+/* publications */
+.pubs{display:grid; gap:28px}
+.pub{display:grid; grid-template-columns:220px minmax(0,1fr); gap:24px; align-items:start}
+@media (max-width:620px){ .pub{grid-template-columns:minmax(0,1fr); gap:12px} }
+.thumb{position:relative; width:100%; max-width:100%; aspect-ratio:16/10; border-radius:6px; overflow:hidden; border:1px solid var(--line); background:#0b1016}
+.thumb.img{background:#fff}
+.thumb canvas, .thumb img, .thumb video{display:block; width:100%; height:100%; object-fit:cover}
+.thumb .tag{position:absolute; left:8px; top:8px; font-family:var(--font-mono); font-size:.6875rem; color:#e9f6f8; background:rgba(8,14,20,.72); padding:2px 6px; border-radius:3px}
+.pub h3{font-size:var(--s1); font-weight:600; line-height:1.35; margin:0 0 4px; text-wrap:balance}
+.pub h3 a{color:var(--fg)}
+.pub .authors{font-size:.9375rem; color:var(--muted); margin:0}
+.pub .authors b{color:var(--fg); font-weight:600}
+.pub .venue{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:6px 0 0; font-size:.9375rem}
+.pub .venue em{font-style:italic}
+.badge{font-family:var(--font-mono); font-size:.6875rem; font-weight:500; padding:2px 7px; border-radius:3px; background:var(--accent-soft); color:var(--accent)}
+.badge.hot{background:var(--signal-soft); color:var(--signal)}
+.pub .tl{margin:8px 0 0; font-size:.9375rem; max-width:65ch}
+.btns{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.btns a, .btns button{font:500 .75rem/1 var(--font-mono); padding:6px 9px; border:1px solid var(--line); border-radius:4px; color:var(--fg); background:var(--surface); cursor:pointer}
+.btns a:hover, .btns button:hover{border-color:var(--accent); color:var(--accent); text-decoration:none}
+.bib{margin-top:10px; position:relative}
+.bib pre{margin:0; padding:12px 14px; background:var(--surface); border:1px solid var(--line); border-radius:6px; font:12px/1.55 var(--font-mono); color:var(--fg); overflow-x:auto}
+.bib .copy{position:absolute; right:6px; top:6px; font-size:.75rem; background:var(--bg); border-radius:3px}
+.eq{font-size:var(--s-1); color:var(--muted); margin-top:20px}
+
+/* experience */
+.xp{list-style:none; margin:0; padding:0; display:grid; gap:22px}
+.xp li{display:grid; grid-template-columns:150px minmax(0,1fr); gap:20px}
+@media (max-width:560px){ .xp li{grid-template-columns:minmax(0,1fr); gap:2px} }
+.xp .when{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:3px; font-variant-numeric:tabular-nums}
+.xp .what{font-weight:600}
+.xp .org{color:var(--muted)}
+.xp .org a{font-weight:500}
+.xp p{margin:4px 0 0; font-size:.9375rem; max-width:65ch}
+
+.cols{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px}
+.cols.single{grid-template-columns:minmax(0,1fr)}
+@media (max-width:620px){ .cols{grid-template-columns:minmax(0,1fr); gap:28px} }
+.cols h2{margin-bottom:14px!important}
+.lst{list-style:none; margin:0; padding:0; display:grid; gap:8px; font-size:.9375rem}
+.lst li{display:grid; grid-template-columns:52px minmax(0,1fr); gap:10px}
+.lst .y{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); padding-top:1px; font-variant-numeric:tabular-nums}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px max(40px, env(safe-area-inset-bottom, 0px)); font-size:var(--s-1); color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brand">Giyong Moon</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#" id="nav-cv" hidden>CV</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle dark mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap profile">
+    <aside class="id" id="id"></aside>
+    <div class="bio" id="bio"></div>
+  </div>
+
+  <section id="news"><div class="wrap">
+    <div class="sec-head"><h2>News</h2></div>
+    <ul class="news" id="news-list"></ul>
+    <button class="toggle" id="news-toggle" type="button" hidden>Show all news</button>
+  </div></section>
+
+  <section id="publications"><div class="wrap">
+    <div class="sec-head">
+      <h2>Publications</h2>
+      <span class="hint" id="pub-hint"></span>
+      <div class="chips" id="chips" role="group" aria-label="Filter publications">
+        <button class="chip" type="button" data-f="selected" aria-pressed="true">Selected</button>
+        <button class="chip" type="button" data-f="all" aria-pressed="false">All</button>
+      </div>
+    </div>
+    <div class="pubs" id="pubs"></div>
+    <p class="eq" id="eq">* equal contribution</p>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <ul class="xp" id="xp"></ul>
+  </div></section>
+
+  <section id="awards"><div class="wrap cols" id="award-cols">
+    <div><h2>Awards &amp; Honors</h2><ul class="lst" id="awards-list"></ul></div>
+    <div id="service-col"><h2>Academic Service</h2><ul class="lst" id="service-list"></ul></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span id="foot-name"></span>
+  <span id="updated"></span>
+</div></footer>
+
+<script>
+/* ============================================================
+   EDIT YOUR CONTENT HERE. Everything on the page comes from DATA.
+   - me: the exact author string to bold in author lists.
+   - thumb: path to an image/gif/mp4 (e.g. "assets/paper.webp"). Leave "" to draw a placeholder BEV scene.
+   - Empty fields (nativeName, seeking, email, service, ...) are simply hidden.
+   - The <title> and <meta> tags in <head> are static: update them by hand if the name or role changes.
+   ============================================================ */
+const DATA = {
+  profile: {
+    name: "Giyong Moon",
+    nativeName: "",                  // e.g. Korean name
+    me: "Giyong Moon",
+    role: "Undergraduate Researcher",
+    affiliation: ["IRCV Lab, Hanyang University", "https://ircv.hanyang.ac.kr/"],
+    next: "Incoming M.S. student, March 2027",
+    photo: "assets/profile.jpg",
+    email: "shdragron@hanyang.ac.kr",
+    links: [
+      ["GitHub", "https://github.com/shdragron"],
+      ["LinkedIn", "https://www.linkedin.com/in/shdragron"],
+      ["Hugging Face", "https://huggingface.co/shdragron"]
+    ],
+    bio: [
+      "I am an undergraduate researcher at the <a href=\"https://ircv.hanyang.ac.kr/\">Intelligent Robotics and Computer Vision (IRCV) Lab</a>, Hanyang University, advised by Prof. Soonmin Hwang. I will start my M.S. in Automotive Engineering at Hanyang University in March 2027.",
+      "My research asks how autonomous vehicles perceive and reason about 3D space when real-world conditions change: camera viewpoint, calibration, and sensor or vehicle configuration. I work on <b>robust multi-camera BEV and 3D perception</b> and <b>LiDAR-based spatial grounding</b>. Recently I co-first-authored <a href=\"https://robogeo2027.github.io/\">RoboGeo</a> (WACV 2027), a benchmark for camera-geometry robustness in BEV perception, and <a href=\"https://arxiv.org/abs/2609.29835\">Retrieve-to-Localize</a>, which grounds language queries in LiDAR geometry with an LLM.",
+      "Before moving into perception, I spent four years on Hanyang's Formula Student team RACE doing mechanical analysis for monocoque race cars. That shapes how I approach research: a perception model is one part of a vehicle, bounded by geometry, hardware, timing, and deployment limits."
+    ],
+    seeking: "",
+    interests: [
+      "Robust multi-camera BEV & 3D perception",
+      "Multi-view geometry",
+      "Camera & LiDAR spatial grounding",
+      "Robustness to sensor and vehicle configuration changes",
+      "Real-vehicle deployment"
+    ],
+    education: [
+      ["2027–", "M.S. in Automotive Engineering", "Hanyang University, from March 2027"],
+      ["2020–26", "B.S. in Automotive Engineering", "Hanyang University"]
+    ]
+  },
+
+  news: [
+    ["2026.11", "Released the <a href=\"https://github.com/shdragron/RoboGeo\">code</a> and <a href=\"https://huggingface.co/datasets/shdragron/RoboGeo\">dataset</a> for RoboGeo."],
+    ["2026", "<b>RoboGeo</b> was accepted to <b>WACV 2027</b> in Round 1 (Evaluations &amp; Datasets Track)."],
+    ["2026.09", "Our preprint <a href=\"https://arxiv.org/abs/2609.29835\">Retrieve-to-Localize</a> on LLM-based spatial grounding in LiDAR is on arXiv."],
+    ["2025", "Won <b>1st place</b> at the 1st Korean Formula Student Driverless Competition as team lead."],
+    ["2025", "Received the <b>Grand Prize</b> for my graduation thesis and poster on robust BEV perception."],
+    ["2024.12", "Joined the <a href=\"https://ircv.hanyang.ac.kr/\">IRCV Lab</a> at Hanyang University as an undergraduate researcher."]
+  ],
+
+  publications: [
+    {
+      title: "RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception",
+      authors: "Jeongtae Kim*, Giyong Moon*, Chanyoung Lee, Soonmin Hwang",
+      venue: "WACV", year: 2027, track: "Evaluations & Datasets Track", highlight: "Round 1 Acceptance",
+      tagline: "A CARLA-based benchmark that re-renders scenes under controlled camera-geometry changes, with viewpoint-perturbation and cross-platform (sedan, SUV, bus) transfer protocols.",
+      thumb: "assets/robogeo.webp", selected: true,
+      links: { Project: "https://robogeo2027.github.io/", Code: "https://github.com/shdragron/RoboGeo", Dataset: "https://huggingface.co/datasets/shdragron/RoboGeo" },
+      bibtex: "@inproceedings{robogeo2027,\n  title     = {RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception},\n  author    = {Jeongtae Kim and Giyong Moon and Chanyoung Lee and Soonmin Hwang},\n  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  year      = {2027}\n}"
+    },
+    {
+      title: "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding",
+      authors: "Byounggun Park*, Giyong Moon*, Jusung Kim, Soonmin Hwang",
+      venue: "arXiv preprint", year: 2026, track: "", highlight: "",
+      tagline: "Introduces SpatialLiDAR-QA and SpatialLiDAR-LM, which answers compositional spatial questions by retrieving position-aware proposals and refining target coordinates directly from local LiDAR points.",
+      thumb: "assets/spatiallidar.webp", selected: true,
+      links: { arXiv: "https://arxiv.org/abs/2609.29835", PDF: "https://arxiv.org/pdf/2609.29835" },
+      bibtex: "@article{park2026retrieve,\n  title   = {Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding},\n  author  = {Park, Byounggun and Moon, Giyong and Kim, Jusung and Hwang, Soonmin},\n  journal = {arXiv preprint arXiv:2609.29835},\n  year    = {2026}\n}"
+    }
+  ],
+
+  // [when, role, organization, link ("" for none), extra (shown after a dot), one-line description]
+  experience: [
+    ["2024.12 – Present", "Undergraduate Researcher", "IRCV Lab, Hanyang University", "https://ircv.hanyang.ac.kr/", "Advisor: Prof. Soonmin Hwang", "Robust multi-camera BEV and 3D perception under camera viewpoint, calibration, and sensor-configuration changes, using real-world driving data and CARLA; LiDAR-based spatial grounding and 3D spatial reasoning."],
+    ["2025 – Present", "Team Lead", "Formula Student Driverless", "", "", "Led LiDAR-based perception and won 1st place at the 1st Korean Formula Student Driverless Competition (simulator); now preparing a real-vehicle driverless car."],
+    ["2025", "Camera Perception Engineer", "T-CAR Project", "", "", "Camera–LiDAR calibration, hardware synchronization, and StreamPETR 3D detection deployed on a real vehicle with TensorRT."],
+    ["2020.03 – 2024.09", "Mechanical Analysis Engineer", "RACE Formula Student Team, Hanyang University", "", "", "Led optimization of the Forsythia E-Formula car, Korea's first 4WD in-wheel-motor vehicle with a full monocoque; cut upright weight from 1.3 to 0.9 kg and A-arm weight from 9.8 to 7.5 kg."],
+    ["2021.09 – 2023.03", "Military Service", "Republic of Korea Army", "", "", "Sergeant, 20th Armored Brigade."]
+  ],
+
+  awards: [
+    ["2025", "1st Place, 1st Korean Formula Student Driverless Competition"],
+    ["2025", "Grand Prize, Graduation Thesis and Poster Presentation"],
+    ["2024", "Bronze Prize (3rd), Formula Student Korea, E-Formula"],
+    ["2021", "Gold Prize (1st), Formula KSAE Altair Optimal Design Award"],
+    ["2021", "Overall 35th, Formula SAE California"],
+    ["2020", "Silver Prize, Formula KSAE Engineering Design Award"],
+    ["", "Gold Prize (1st), 6th Engineering Fundamentals Design Contest"]
+  ],
+
+  service: [],
+
+  updated: "November 2026"
+};
+</script>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+  const P = DATA.profile;
+
+  /* ---------- theme ---------- */
+  const root = document.documentElement;
+  $("#theme-btn").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch(e){}
+  });
+
+  /* ---------- profile ---------- */
+  $("#brand").textContent = P.name;
+  $("#foot-name").textContent = "© " + new Date().getFullYear() + " " + P.name;
+  $("#updated").textContent = "Last updated " + DATA.updated;
+  const cv = P.links.find(l => /\bcv\b/i.test(l[0]));
+  if (cv) { $("#nav-cv").href = cv[1]; $("#nav-cv").hidden = false; }
+
+  const [affName, affUrl] = Array.isArray(P.affiliation) ? P.affiliation : [P.affiliation, ""];
+  const initials = P.name.split(/\s+/).map(w => w[0]).join("").slice(0,2).toUpperCase();
+  $("#id").innerHTML = `
+    <div class="avatar">${P.photo ? `<img src="${esc(P.photo)}" alt="${esc(P.name)}" width="200" height="200">` : `<span>${esc(initials)}</span>`}</div>
+    <h1>${esc(P.name)}</h1>
+    ${P.nativeName ? `<div class="native">${esc(P.nativeName)}</div>` : ""}
+    <div class="role">${esc(P.role)}</div>
+    <div class="aff">${affUrl ? `<a href="${esc(affUrl)}" target="_blank" rel="noopener">${esc(affName)}</a>` : esc(affName)}</div>
+    ${P.next ? `<div class="next">${esc(P.next)}</div>` : ""}
+    <div class="links">${P.links.map(([t,h]) => `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(t)}</a>`).join("")}</div>
+    ${P.email ? `<div class="email"><code id="email-text">${esc(P.email)}</code><button class="copy" type="button" data-copy="#email-text">Copy</button></div>` : ""}`;
+
+  const eduCol = P.education.length ? `<div><p class="label">Education</p><ul class="plain edu">${P.education.map(([y,d,s]) => `<li><span class="yr">${esc(y)}</span><span class="deg">${esc(d)}</span><span class="sch">${esc(s)}</span></li>`).join("")}</ul></div>` : "";
+  $("#bio").innerHTML = `
+    <h2>About me</h2>
+    ${P.bio.map(p => `<p>${p}</p>`).join("")}
+    ${P.seeking ? `<p class="seeking">${P.seeking}</p>` : ""}
+    <div class="two">
+      <div><p class="label">Interests</p><ul class="plain interests">${P.interests.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>
+      ${eduCol}
+    </div>`;
+
+  /* ---------- news ---------- */
+  const NEWS_SHOWN = 6;
+  const newsList = $("#news-list"), newsBtn = $("#news-toggle");
+  let newsAll = false;
+  function renderNews(){
+    const items = newsAll ? DATA.news : DATA.news.slice(0, NEWS_SHOWN);
+    newsList.innerHTML = items.map(([d,t]) => `<li><span class="d">${esc(d)}</span><span>${t}</span></li>`).join("");
+    newsBtn.hidden = DATA.news.length <= NEWS_SHOWN;
+    newsBtn.textContent = newsAll ? "Show fewer" : `Show all news (${DATA.news.length})`;
+  }
+  newsBtn.addEventListener("click", () => { newsAll = !newsAll; renderNews(); });
+  renderNews();
+
+  /* ---------- publications ---------- */
+  const allSelected = DATA.publications.every(p => p.selected);
+  let filter = allSelected ? "all" : "selected";
+  $("#chips").hidden = allSelected;
+  $("#eq").hidden = !DATA.publications.some(p => p.authors.includes("*"));
+  const pubsEl = $("#pubs");
+  function boldMe(a){ return esc(a).split(esc(P.me)).join(`<b>${esc(P.me)}</b>`); }
+  function renderPubs(){
+    const list = DATA.publications.filter(p => filter === "all" || p.selected);
+    $("#pub-hint").innerHTML = filter === "selected" ? `${list.length} of ${DATA.publications.length} shown` : "";
+    pubsEl.innerHTML = list.map(p => {
+      const n = DATA.publications.indexOf(p), id = "pub" + n;
+      const media = !p.thumb ? `<canvas data-kind="${esc(p.kind||"bev")}" data-seed="${n+1}" width="440" height="275"></canvas><span class="tag">${esc(p.venue)} ${p.year}</span>`
+        : /\.(mp4|webm)$/i.test(p.thumb) ? `<video src="${esc(p.thumb)}" autoplay muted loop playsinline></video>`
+        : `<img src="${esc(p.thumb)}" alt="" loading="lazy" width="880" height="550">`;
+      const first = Object.values(p.links)[0] || "#";
+      return `<article class="pub">
+        <div class="thumb${p.thumb ? " img" : ""}">${media}</div>
+        <div>
+          <h3><a href="${esc(first)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
+          <p class="authors">${boldMe(p.authors)}</p>
+          <p class="venue"><em>${esc(p.venue)} ${p.year}</em>${p.track ? `<span class="badge">${esc(p.track)}</span>` : ""}${p.highlight ? `<span class="badge hot">${esc(p.highlight)}</span>` : ""}</p>
+          ${p.tagline ? `<p class="tl">${esc(p.tagline)}</p>` : ""}
+          <div class="btns">
+            ${Object.entries(p.links).map(([k,v]) => `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(k)}</a>`).join("")}
+            ${p.bibtex ? `<button type="button" aria-expanded="false" aria-controls="${id}-bib" data-bib="${id}">BibTeX</button>` : ""}
+          </div>
+          ${p.bibtex ? `<div class="bib" id="${id}-bib" hidden><pre id="${id}-pre">${esc(p.bibtex)}</pre><button class="copy" type="button" data-copy="#${id}-pre">Copy</button></div>` : ""}
+        </div>
+      </article>`;
+    }).join("");
+    pubsEl.querySelectorAll("canvas").forEach(drawThumb);
+  }
+  document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+    filter = c.dataset.f;
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+    renderPubs();
+  }));
+  pubsEl.addEventListener("click", e => {
+    const b = e.target.closest("[data-bib]"); if (!b) return;
+    const box = document.getElementById(b.dataset.bib + "-bib");
+    box.hidden = !box.hidden; b.setAttribute("aria-expanded", !box.hidden);
+  });
+
+  /* ---------- experience / awards / service ---------- */
+  $("#xp").innerHTML = DATA.experience.map(([w,r,o,h,extra,d]) => `<li>
+      <span class="when">${esc(w)}</span>
+      <div><div class="what">${esc(r)}</div><div class="org">${h ? `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(o)}</a>` : esc(o)}${extra ? " · " + esc(extra) : ""}</div>${d ? `<p>${esc(d)}</p>` : ""}</div>
+    </li>`).join("");
+  $("#awards-list").innerHTML = DATA.awards.map(([y,t]) => `<li><span class="y">${esc(y)}</span><span>${esc(t)}</span></li>`).join("");
+  if (DATA.service.length) {
+    $("#service-list").innerHTML = DATA.service.map(([y,t]) => `<li style="grid-template-columns:72px minmax(0,1fr)"><span class="y">${esc(y)}</span><span>${esc(t)}</span></li>`).join("");
+  } else {
+    $("#service-col").remove();
+    $("#award-cols").classList.add("single");
+  }
+
+  /* ---------- copy buttons ---------- */
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-copy]"); if (!b) return;
+    const el = document.querySelector(b.dataset.copy); const txt = el.textContent;
+    const done = () => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1400); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; setTimeout(() => b.textContent = "Copy", 1400); };
+    try { navigator.clipboard.writeText(txt).then(done, sel); } catch(err){ sel(); }
+  });
+
+  /* ---------- placeholder BEV thumbnails (used only when thumb is "") ---------- */
+  function rng(seed){ let s = seed * 9301 + 49297; return () => (s = (s * 9301 + 49297) % 233280) / 233280; }
+  function drawThumb(cv){
+    const ctx = cv.getContext("2d"), W = cv.width, H = cv.height, r = rng(+cv.dataset.seed * 7), kind = cv.dataset.kind;
+    ctx.fillStyle = "#0b1016"; ctx.fillRect(0,0,W,H);
+    const cx = W*0.5, cy = H*0.62;
+    ctx.strokeStyle = "rgba(92,198,211,0.10)"; ctx.lineWidth = 1;
+    for (let k=1;k<=5;k++){ ctx.beginPath(); ctx.arc(cx,cy,k*48,0,Math.PI*2); ctx.stroke(); }
+    ctx.fillStyle = "#18212b";
+    ctx.fillRect(cx-46,0,92,H);
+    if (r() > .35){ const y = H*(0.22 + r()*0.2); ctx.fillRect(0,y-38,W,76); }
+    ctx.strokeStyle = "rgba(240,180,90,0.55)"; ctx.setLineDash([10,10]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx,0); ctx.lineTo(cx,H); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = "rgba(220,230,240,0.35)";
+    ctx.beginPath(); ctx.moveTo(cx-46,0); ctx.lineTo(cx-46,H); ctx.moveTo(cx+46,0); ctx.lineTo(cx+46,H); ctx.stroke();
+    if (kind === "occ"){
+      const g = 11;
+      for (let x=0;x<W;x+=g) for (let y=0;y<H;y+=g){
+        const d = Math.hypot(x-cx,y-cy);
+        if (r() < 0.10 && d > 30){ ctx.fillStyle = `rgba(92,198,211,${0.15+r()*0.45})`; ctx.fillRect(x+1,y+1,g-2,g-2); }
+      }
+    }
+    if (kind === "lidar" || kind === "bev"){
+      const n = kind === "lidar" ? 2600 : 900;
+      for (let i=0;i<n;i++){
+        const a = r()*Math.PI*2, d = 20 + Math.pow(r(),0.7)*260;
+        const x = cx + Math.cos(a)*d, y = cy + Math.sin(a)*d*0.95;
+        const t = 1 - d/280;
+        ctx.fillStyle = `rgba(${Math.round(92+150*(1-t))},${Math.round(198*t+90)},${Math.round(211*t+80)},${0.25+0.55*t})`;
+        ctx.fillRect(x,y,1.4,1.4);
+      }
+    }
+    const agents = 4 + Math.floor(r()*4);
+    for (let i=0;i<agents;i++){
+      const lane = r() > .5 ? 1 : -1;
+      const x = cx + lane*23 + (r()-.5)*6, y = 20 + r()*(H-40);
+      if (Math.abs(y-cy) < 30) continue;
+      const dir = lane > 0 ? 1 : -1;
+      for (let m=0;m<3;m++){
+        const bend = (m-1) * (8 + r()*14);
+        ctx.strokeStyle = `rgba(240,180,90,${m===1?0.85:0.35})`; ctx.lineWidth = m===1?2:1.2;
+        ctx.beginPath(); ctx.moveTo(x,y);
+        ctx.quadraticCurveTo(x, y - dir*40, x + bend, y - dir*(70 + r()*20)); ctx.stroke();
+      }
+      ctx.strokeStyle = "#5cc6d3"; ctx.lineWidth = 1.6;
+      ctx.strokeRect(x-7,y-13,14,26);
+    }
+    ctx.fillStyle = "#e9f6f8"; ctx.fillRect(cx+23-8,cy-15,16,30);
+    ctx.strokeStyle = "rgba(233,246,248,0.9)"; ctx.lineWidth = 2.4;
+    ctx.beginPath(); ctx.moveTo(cx+23,cy-15);
+    ctx.bezierCurveTo(cx+23,cy-70,cx+23+(r()-.5)*30,cy-110,cx+23+(r()-.5)*50,cy-150); ctx.stroke();
+  }
+
+  renderPubs();
+})();
+</script>
+</body>
+</html>
