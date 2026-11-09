@@ -28,8 +28,9 @@
   --text:#34383d;
   --muted:#757a80;
   --line:#e6e6e6;
-  --accent:#0d7a8a;
-  --accent-ink:#ffffff;
+  --accent:#dbb16f;      /* gold: icons, buttons, borders */
+  --link:#b8863b;        /* deeper gold so inline text links stay readable on white */
+  --accent-ink:#1a1a1a;
   --hl:#c62828;
   --head:"Montserrat", "Segoe UI", system-ui, sans-serif;
   --body:"Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -38,12 +39,12 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#14171c; --bg-alt:#1a1e24; --fg:#f2f4f7; --text:#d3d8df; --muted:#97a0ab; --line:#2b3139;
-    --accent:#5cc6d3; --accent-ink:#0f1318; --hl:#ff8a80; color-scheme:dark;
+    --accent:#dbb16f; --link:#e3bd7f; --accent-ink:#14171c; --hl:#ff8a80; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#14171c; --bg-alt:#1a1e24; --fg:#f2f4f7; --text:#d3d8df; --muted:#97a0ab; --line:#2b3139;
-  --accent:#5cc6d3; --accent-ink:#0f1318; --hl:#ff8a80; color-scheme:dark;
+  --accent:#dbb16f; --link:#e3bd7f; --accent-ink:#14171c; --hl:#ff8a80; color-scheme:dark;
 }
 
 *{box-sizing:border-box}
@@ -52,7 +53,7 @@ img, video{max-width:100%}
 html{scroll-behavior:smooth; scroll-padding-top:64px}
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
 body{margin:0; background:var(--bg); color:var(--text); font:400 1rem/1.65 var(--body); -webkit-font-smoothing:antialiased}
-a{color:var(--accent); text-decoration:none; transition:color .2s}
+a{color:var(--link); text-decoration:none; transition:color .2s}
 a:hover{text-decoration:underline; text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
 h1, h2, h3{font-family:var(--head); color:var(--fg); margin:0}
@@ -128,12 +129,12 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .pub .authors{margin-top:6px; font-size:.875rem; letter-spacing:.01em; color:var(--muted)}
 .pub .authors b{color:var(--fg); font-weight:700}
 .btns{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
-.btns a, .btns button{font:400 .8125rem/1 var(--body); padding:5px 10px; border:1px solid var(--accent); border-radius:3px; color:var(--accent); background:transparent; cursor:pointer; transition:background .2s, color .2s}
+.btns a, .btns button{font:400 .8125rem/1 var(--body); padding:5px 10px; border:1px solid var(--accent); border-radius:3px; color:var(--link); background:transparent; cursor:pointer; transition:background .2s, color .2s}
 .btns a:hover, .btns button:hover, .btns button[aria-expanded="true"]{background:var(--accent); color:var(--accent-ink); text-decoration:none}
 .bib{margin-top:10px; position:relative}
 .bib pre{margin:0; padding:12px 14px; background:var(--bg-alt); border:1px solid var(--line); border-radius:4px; font:12px/1.55 ui-monospace, "SFMono-Regular", Consolas, monospace; color:var(--text); overflow-x:auto}
 .home:nth-of-type(even) .bib pre{background:var(--bg)}
-.bib .copy{position:absolute; right:6px; top:6px; border:0; background:none; color:var(--accent); font:500 .75rem var(--body); cursor:pointer; padding:2px 4px}
+.bib .copy{position:absolute; right:6px; top:6px; border:0; background:none; color:var(--link); font:500 .75rem var(--body); cursor:pointer; padding:2px 4px}
 .media{display:block; width:100%; aspect-ratio:16/10; border-radius:4px; overflow:hidden; background:#fff}
 .media img, .media video{display:block; width:100%; height:100%; object-fit:cover}
 
